@@ -1,8 +1,8 @@
-# LostAndFound2: Smart Item Recovery Platform (Android App)
+# LostAndFound: Smart Item Recovery Platform (Android App)
 
 > 🏆 Final Year Project at Atish Dipankar University of Science & Technology (ADUST). **Placed 2nd at the project defense.**
 
-LostAndFound2 helps people report lost items, post found items, and get them back to the right owner. It uses on-device AI to describe items automatically and checks claims for fraud before an item is handed over. This repository contains the **Android app**. The companion website is in [LostAndFound-Website](https://github.com/munny1234-web/LostAndFound-Website), and both share the same Firebase backend.
+LostAndFound helps people report lost items, post found items, and get them back to the right owner. It uses on-device AI to describe items automatically and checks claims for fraud before an item is handed over. This repository contains the **Android app**. The companion website is in [LostAndFound-Website](https://github.com/munny1234-web/LostAndFound-Website), and both share the same Firebase backend.
 
 ## ✨ Features
 
