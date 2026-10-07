@@ -42,4 +42,4 @@ LostAndFound helps people report lost items, post found items, and get them back
 **Jannatul Ferdous Munny**
 Supervised by **Mahmudur Rahman Roni**, Associate Professor, Department of CSE, ADUST
 
-[LinkedIn](https://www.linkedin.com/in/jannaul-ferdous-munny-036028226) · ferdousmunny188@gmail.com
+[LinkedIn](https://www.linkedin.com/in/jannatul-ferdous-munny-036028226) · ferdousmunny188@gmail.com
