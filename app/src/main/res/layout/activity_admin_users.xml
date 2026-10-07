@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <TextView android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="22sp" android:textColor="#1A1A2E"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Users" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:id="@+id/tvUserCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Manage registered users" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText android:id="@+id/etAdminUserSearch" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Search users by name or email..." android:background="@drawable/input_modern"
+        android:padding="12dp" android:layout_margin="12dp"/>
+
+    <ListView android:id="@+id/listAdminUsers" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:padding="12dp"
+        android:divider="@android:color/transparent" android:dividerHeight="10dp"/>
+
+</LinearLayout>

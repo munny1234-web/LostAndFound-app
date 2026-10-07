@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="20sp"
+                android:textColor="#1A1A2E" android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="FAQ &amp; Help" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Tap a question to see the answer" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- FAQ 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="How do I report a lost item?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Tap the 'Report Lost' button in the bottom navigation. Fill in the item details including name, category, description, date lost, location, and your contact information. Add a photo for better AI matching results."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+            <!-- FAQ 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="How does AI matching work?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Our AI analyzes the title, description, category, and location of your item. It uses text similarity algorithms (TF-IDF) and image analysis (ML Kit) to find the best matches between lost and found items automatically."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+            <!-- FAQ 3 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq3" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="How do I claim an item?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer3" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Open any found item and tap 'This is Mine — Claim It!'. Explain why the item belongs to you and optionally upload a proof photo (receipt, photo with the item, etc.). The finder will review your claim."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+            <!-- FAQ 4 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq4" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Is my data safe?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer4" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Yes! We use Firebase Authentication and Realtime Database with security rules. Your personal data is only accessible by you. Contact information is only visible when you choose to show it on a post."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+            <!-- FAQ 5 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq5" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="How do I update item status?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer5" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Open your own post and tap 'Update Status'. You can change the status to: Still Searching, Item Found, or Returned to Owner. This helps the community know the current situation."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+            <!-- FAQ 6 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="18dp" android:elevation="2dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:id="@+id/layoutFaq6" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="How do I report a fake post?"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="▼" android:textSize="14sp" android:textColor="#6C63FF"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAnswer6" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:visibility="gone"
+                    android:text="Open the post and scroll down to find the 'Report Post' button. Select the reason for your report. Our admin team will review and take appropriate action within 24 hours."
+                    android:textSize="13sp" android:textColor="#555" android:lineSpacingMultiplier="1.6"
+                    android:paddingTop="12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

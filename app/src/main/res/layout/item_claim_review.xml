@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/card_elevated" android:orientation="vertical" android:padding="16dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:paddingBottom="8dp">
+        <TextView android:id="@+id/tvClaimantName" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Claimant" android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+        <TextView android:id="@+id/tvClaimReviewStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⏳ Pending" android:textSize="11sp" android:textStyle="bold" android:textColor="#6C63FF"
+            android:background="@drawable/chip_default" android:paddingHorizontal="10dp" android:paddingVertical="4dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvClaimReviewReason" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Reason" android:textSize="13sp" android:textColor="#555" android:paddingBottom="8dp"/>
+
+    <LinearLayout android:id="@+id/layoutHiddenMatch" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/chip_selected" android:orientation="vertical" android:padding="12dp"
+        android:layout_marginBottom="8dp" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔒 Verification Answer" android:textSize="11sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <TextView android:id="@+id/tvClaimVerificationAnswer" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="#FFFFFF" android:paddingTop="4dp"/>
+        <TextView android:id="@+id/tvHiddenMatchIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textStyle="bold" android:paddingTop="6dp"/>
+    </LinearLayout>
+
+    <ImageView android:id="@+id/imgClaimProof" android:layout_width="match_parent" android:layout_height="140dp"
+        android:scaleType="centerCrop" android:visibility="gone" android:layout_marginBottom="8dp"/>
+
+    <HorizontalScrollView android:id="@+id/scrollClaimProofThumbs" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:visibility="gone" android:scrollbars="none"
+        android:layout_marginBottom="8dp">
+        <LinearLayout android:id="@+id/layoutClaimProofThumbs" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <TextView android:id="@+id/tvClaimReviewDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="" android:textSize="11sp" android:textColor="#9B8EC4" android:paddingBottom="10dp"/>
+
+    <LinearLayout android:id="@+id/layoutClaimReviewActions" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnApproveClaim" android:layout_width="0dp" android:layout_height="46dp"
+            android:layout_weight="1" android:text="✅ Approve" android:background="@drawable/btn_found"
+            android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btnRejectClaim" android:layout_width="0dp" android:layout_height="46dp"
+            android:layout_weight="1" android:text="❌ Reject" android:textColor="#FF4444" android:backgroundTint="#FFF0F0"
+            android:textSize="13sp" android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft green pill for the "resolved" status badge shown to EVERY viewer -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EAF9F0"/>
+    <corners android:radius="8dp"/>
+</shape>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="18dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <TextView android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="←" android:textSize="20sp" android:textColor="#1A1A2E"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/circle_purple" android:gravity="center" android:layout_marginEnd="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvChatName" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="User"
+                android:textSize="16sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:id="@+id/tvItemName" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView android:id="@+id/listMessages" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:padding="12dp"
+        android:divider="@android:color/transparent" android:dividerHeight="6dp"
+        android:stackFromBottom="true"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#FFFFFF" android:orientation="horizontal"
+        android:padding="12dp" android:gravity="center_vertical" android:elevation="8dp">
+        <EditText android:id="@+id/etMessage" android:layout_width="0dp" android:layout_height="52dp"
+            android:layout_weight="1" android:hint="Type a message..."
+            android:background="@drawable/input_modern" android:paddingHorizontal="18dp"
+            android:layout_marginEnd="10dp" android:textSize="14sp"/>
+        <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+            android:background="@drawable/btn_purple" android:gravity="center">
+            <Button android:id="@+id/btnSend" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="➤" android:background="@android:color/transparent"
+                android:textColor="#FFFFFF" android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

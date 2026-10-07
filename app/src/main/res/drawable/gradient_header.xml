@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lighter header gradient — no more deep #3D2DBF ending -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#9D97FF" android:endColor="#6C63FF" android:angle="135"/>
+    <corners android:bottomLeftRadius="32dp" android:bottomRightRadius="32dp"/>
+</shape>

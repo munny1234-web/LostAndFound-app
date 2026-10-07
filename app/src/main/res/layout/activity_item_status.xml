@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center"
+            android:layout_marginEnd="14dp">
+            <TextView android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←"
+                android:textSize="22sp" android:textColor="#1A1A2E"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Item Status" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Track your item progress" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Item Title Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="20dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/tvItemTitle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="20sp"
+                    android:textStyle="bold" android:textColor="#1A1A2E" android:paddingBottom="8dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Current Status: " android:textSize="13sp" android:textColor="#888"/>
+                    <TextView android:id="@+id/tvCurrentStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="🔍 Still Searching"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#6C63FF"
+                        android:background="@drawable/chip_default" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Status Buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="20dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Update Status" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A1A2E" android:paddingBottom="14dp"/>
+                <Button android:id="@+id/btnSearching" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="🔍 Still Searching"
+                    android:backgroundTint="#F0EEFF" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnFound" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="✅ Item Found"
+                    android:backgroundTint="#E8F5E9" android:textColor="#2ECC71"
+                    android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnReturned" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="🎉 Returned to Owner"
+                    android:background="@drawable/btn_purple" android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Timeline -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="20dp" android:elevation="3dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📋 Timeline" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+                <ListView android:id="@+id/listTimeline" android:layout_width="match_parent"
+                    android:layout_height="250dp" android:divider="@android:color/transparent"
+                    android:dividerHeight="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

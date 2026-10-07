@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="20sp"
+                android:textColor="#1A1A2E" android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="About App" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- App Logo -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="28dp" android:gravity="center" android:elevation="3dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="100dp" android:layout_height="100dp"
+                    android:background="@drawable/btn_purple" android:gravity="center"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🔍" android:textSize="56sp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lost &amp; Found" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="#1A1A2E" android:paddingBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Version 1.0.0" android:textSize="13sp" android:textColor="#9B8EC4"
+                    android:background="@drawable/chip_default" android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+
+            <!-- About Project -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📖 About This Project" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lost &amp; Found is an AI-powered Android application designed to help people report and recover lost items. The app uses Machine Learning (ML Kit) for intelligent item matching based on text descriptions and image similarity."
+                    android:textSize="14sp" android:textColor="#555" android:lineSpacingMultiplier="1.7"/>
+            </LinearLayout>
+
+            <!-- Key Features -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="✨ Key Features" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🤖  AI-powered item matching\n📷  Image label detection\n💬  Real-time chat\n📋  Item status tracking\n⚠️  Report system\n🔔  Push notifications\n📊  Admin dashboard\n🔐  Secure authentication"
+                    android:textSize="14sp" android:textColor="#555" android:lineSpacingMultiplier="2.0"/>
+            </LinearLayout>
+
+            <!-- Technologies -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🛠️ Technologies Used" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:paddingBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Android (Java)" android:textSize="12sp" android:textColor="#6C63FF"
+                        android:background="@drawable/chip_default" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Firebase" android:textSize="12sp" android:textColor="#FF6584"
+                        android:background="@drawable/tag_lost" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ML Kit" android:textSize="12sp" android:textColor="#2ECC71"
+                        android:background="@drawable/tag_found" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Glide" android:textSize="12sp" android:textColor="#6C63FF"
+                        android:background="@drawable/chip_default" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Firebase Storage" android:textSize="12sp" android:textColor="#6C63FF"
+                        android:background="@drawable/chip_default" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Realtime DB" android:textSize="12sp" android:textColor="#6C63FF"
+                        android:background="@drawable/chip_default" android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Developer -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👨‍💻 Developer" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="56dp" android:layout_height="56dp"
+                        android:background="@drawable/circle_purple" android:gravity="center"
+                        android:layout_marginEnd="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="👤" android:textSize="28sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Jannatul Ferdous Munny — Department of CSE" android:textSize="14sp"
+                            android:textStyle="bold" android:textColor="#1A1A2E"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Atish Dipankar University of Science and Technology" android:textSize="12sp" android:textColor="#888"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="ID: 231-0042-203" android:textSize="12sp" android:textColor="#9B8EC4"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <Button android:id="@+id/btnFaq" android:layout_width="match_parent"
+                android:layout_height="56dp" android:text="❓ FAQ &amp; Help"
+                android:backgroundTint="#F0EEFF" android:textColor="#6C63FF"
+                android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+
+            <Button android:id="@+id/btnEmail" android:layout_width="match_parent"
+                android:layout_height="56dp" android:text="📧 Contact Developer"
+                android:background="@drawable/btn_purple" android:textColor="#FFFFFF"
+                android:textSize="15sp" android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

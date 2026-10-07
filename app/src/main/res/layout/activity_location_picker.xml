@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="18dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <TextView android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="22sp" android:textColor="#1A1A2E"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tap the map to drop a pin" android:textSize="15sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:id="@+id/tvPickedAddress" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/card_elevated" android:padding="14dp" android:textSize="13sp"
+            android:textColor="#1A1A2E" android:layout_marginBottom="10dp"
+            android:text="No location selected yet"/>
+
+        <Button android:id="@+id/btnUseCurrentLocation" android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="📍 Use My Current Location" android:background="@drawable/btn_secondary"
+            android:textColor="#6C63FF" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+
+        <Button android:id="@+id/btnConfirmLocation" android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="✓ Confirm This Location" android:background="@drawable/btn_purple"
+            android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:enabled="false"/>
+    </LinearLayout>
+</RelativeLayout>

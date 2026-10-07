@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/gradient_splash">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center">
+        <LinearLayout android:layout_width="100dp" android:layout_height="100dp"
+            android:background="@drawable/card_elevated" android:gravity="center"
+            android:elevation="8dp" android:layout_marginBottom="28dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔍" android:textSize="52sp"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Lost &amp; Found" android:textSize="38sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:letterSpacing="0.02"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Reconnecting people with their belongings"
+            android:textSize="14sp" android:textColor="#FFFFFFCC"
+            android:paddingTop="10dp" android:gravity="center" android:paddingHorizontal="32dp"/>
+        <ProgressBar android:layout_width="48dp" android:layout_height="48dp"
+            android:indeterminateTint="#FFFFFF" android:layout_marginTop="56dp"/>
+    </LinearLayout>
+</FrameLayout>

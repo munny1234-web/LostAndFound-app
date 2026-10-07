@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="←" android:textSize="20sp" android:textColor="#1A1A2E"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Edit Profile" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Profile Photo -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="24dp" android:gravity="center" android:elevation="3dp"
+                android:layout_marginBottom="12dp">
+                <ImageView android:id="@+id/imgProfile" android:layout_width="100dp"
+                    android:layout_height="100dp" android:scaleType="centerCrop"
+                    android:background="@drawable/circle_purple" android:layout_marginBottom="14dp"/>
+                <Button android:id="@+id/btnChangePhoto" android:layout_width="wrap_content"
+                    android:layout_height="44dp" android:text="📷 Change Photo"
+                    android:backgroundTint="#F0EEFF" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingHorizontal="20dp"/>
+            </LinearLayout>
+
+            <!-- Profile Fields -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Full Name *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etName" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:hint="Your full name"
+                    android:paddingHorizontal="18dp" android:background="@drawable/input_modern"
+                    android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Phone Number" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etPhone" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:hint="Your phone number"
+                    android:inputType="phone" android:paddingHorizontal="18dp"
+                    android:background="@drawable/input_modern"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="60dp"
+        android:text="Save Changes" android:background="@drawable/btn_purple"
+        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

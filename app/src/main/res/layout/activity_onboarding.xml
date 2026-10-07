@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#FFFFFF">
+
+    <!-- Page 1 -->
+    <LinearLayout android:id="@+id/page1" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:gravity="center" android:padding="40dp">
+        <LinearLayout android:layout_width="140dp" android:layout_height="140dp"
+            android:background="@drawable/gradient_splash" android:gravity="center"
+            android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔍" android:textSize="72sp"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Lost Something?" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="#1A1A2E" android:gravity="center" android:paddingBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Report lost items and let the community help you find them. Our AI system will automatically match your item with found reports!"
+            android:textSize="15sp" android:textColor="#888" android:gravity="center"
+            android:lineSpacingMultiplier="1.6"/>
+    </LinearLayout>
+
+    <!-- Page 2 -->
+    <LinearLayout android:id="@+id/page2" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:gravity="center" android:padding="40dp"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="140dp" android:layout_height="140dp"
+            android:background="@drawable/gradient_found" android:gravity="center"
+            android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💬" android:textSize="72sp"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Found Something?" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="#1A1A2E" android:gravity="center" android:paddingBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Post found items and connect directly with the owner via real-time chat. Help reunite people with their belongings!"
+            android:textSize="15sp" android:textColor="#888" android:gravity="center"
+            android:lineSpacingMultiplier="1.6"/>
+    </LinearLayout>
+
+    <!-- Page 3 -->
+    <LinearLayout android:id="@+id/page3" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:gravity="center" android:padding="40dp"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="140dp" android:layout_height="140dp"
+            android:background="@drawable/btn_purple" android:gravity="center"
+            android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🤖" android:textSize="72sp"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AI-Powered Matching" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="#1A1A2E" android:gravity="center" android:paddingBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Our smart AI analyzes text and images to automatically find the best matches between lost and found items. Never lose hope!"
+            android:textSize="15sp" android:textColor="#888" android:gravity="center"
+            android:lineSpacingMultiplier="1.6"/>
+    </LinearLayout>
+
+    <!-- Dots -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center" android:orientation="horizontal" android:paddingBottom="20dp">
+        <TextView android:id="@+id/tvDot1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="●" android:textSize="22sp"
+            android:textColor="#6C63FF" android:paddingHorizontal="8dp"/>
+        <TextView android:id="@+id/tvDot2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="●" android:textSize="22sp"
+            android:textColor="#CCCCCC" android:paddingHorizontal="8dp"/>
+        <TextView android:id="@+id/tvDot3" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="●" android:textSize="22sp"
+            android:textColor="#CCCCCC" android:paddingHorizontal="8dp"/>
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingHorizontal="20dp" android:paddingBottom="12dp">
+        <Button android:id="@+id/btnSkip" android:layout_width="0dp" android:layout_height="56dp"
+            android:layout_weight="1" android:text="Skip" android:backgroundTint="#F5F5F5"
+            android:textColor="#888" android:textStyle="bold" android:layout_marginEnd="12dp"/>
+        <Button android:id="@+id/btnNext" android:layout_width="0dp" android:layout_height="56dp"
+            android:layout_weight="2" android:text="Next →" android:background="@drawable/btn_purple"
+            android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/btnGetStarted" android:layout_width="match_parent"
+        android:layout_height="60dp" android:text="🚀 Get Started!"
+        android:background="@drawable/btn_purple" android:textColor="#FFFFFF"
+        android:textSize="17sp" android:textStyle="bold"
+        android:layout_marginHorizontal="20dp" android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F7F7FB">
+
+    <!-- Clean toolbar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#FFFFFF" android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="14dp" android:elevation="2dp">
+        <TextView android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+            android:text="←" android:textSize="20sp" android:textColor="#14142B" android:gravity="center"
+            android:background="@drawable/seg_track"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Analytics" android:textSize="18sp" android:textStyle="bold" android:textColor="#14142B"/>
+            <TextView android:id="@+id/tvPeriodNote" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Last 30 days · vs previous 30 days" android:textSize="11sp" android:textColor="#7A7896"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="14dp">
+
+            <!-- Segmented period control -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="@drawable/seg_track"
+                android:padding="3dp" android:layout_marginBottom="14dp">
+
+                <Button android:id="@+id/btnR7" android:layout_width="0dp" android:layout_height="34dp"
+                    android:layout_weight="1" android:text="7D" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="#7A7896" android:minWidth="0dp" android:padding="0dp"/>
+                <Button android:id="@+id/btnR30" android:layout_width="0dp" android:layout_height="34dp"
+                    android:layout_weight="1" android:text="30D" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@drawable/seg_thumb"
+                    android:textColor="#14142B" android:minWidth="0dp" android:padding="0dp"/>
+                <Button android:id="@+id/btnR90" android:layout_width="0dp" android:layout_height="34dp"
+                    android:layout_weight="1" android:text="90D" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="#7A7896" android:minWidth="0dp" android:padding="0dp"/>
+                <Button android:id="@+id/btnR12" android:layout_width="0dp" android:layout_height="34dp"
+                    android:layout_weight="1" android:text="12M" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="#7A7896" android:minWidth="0dp" android:padding="0dp"/>
+                <Button android:id="@+id/btnRAll" android:layout_width="0dp" android:layout_height="34dp"
+                    android:layout_weight="1" android:text="ALL" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="#7A7896" android:minWidth="0dp" android:padding="0dp"/>
+            </LinearLayout>
+
+            <!-- KPI rows -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp" android:layout_marginEnd="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Posts" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiPosts" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiPostsD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Claims" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiClaims" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiClaimsD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp" android:layout_marginEnd="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Lost reports" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiLost" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiLostD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Found reports" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiFound" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiFoundD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp" android:layout_marginEnd="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Resolution rate" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiRes" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiResD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/card_soft" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Active members" android:textSize="10sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvKpiMembers" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#14142B"/>
+                    <TextView android:id="@+id/tvKpiMembersD" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textSize="11sp" android:textColor="#7A7896" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Post activity — Lost vs Found" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvHeroNote" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="#7A7896"/>
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart android:id="@+id/lineChart"
+                    android:layout_width="match_parent" android:layout_height="220dp" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Categories" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvCatNote" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="#7A7896"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutCatTable" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Claims funnel" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvFunnelNote" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="#7A7896"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutFunnel" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Weekday pattern" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.BarChart android:id="@+id/dowChart"
+                    android:layout_width="match_parent" android:layout_height="170dp" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Claim verification quality" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutQuality" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Top locations" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutLocTable" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_soft" android:orientation="vertical" android:padding="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Top members" android:textSize="11sp" android:textColor="#7A7896"
+                        android:letterSpacing="0.08" android:textAllCaps="true" android:textStyle="bold"/>
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layoutMemTable" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="1dp" android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

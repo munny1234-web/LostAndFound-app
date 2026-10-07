@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded floating hero card (all corners), lighter brand gradient -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#9D97FF" android:endColor="#6C63FF" android:angle="135"/>
+    <corners android:radius="22dp"/>
+</shape>

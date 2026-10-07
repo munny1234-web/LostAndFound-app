@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application
+        android:name=".LostFoundApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LostAndFound">
+
+        <!-- Get this key from Google Cloud Console (see setup instructions) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="PASTE_YOUR_GOOGLE_MAPS_API_KEY_HERE"/>
+
+        <activity android:name=".SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".AdminLoginActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".ReportLostActivity"/>
+        <activity android:name=".ReportFoundActivity"/>
+        <activity android:name=".ItemDetailsActivity"/>
+        <activity android:name=".ChatActivity"/>
+        <activity android:name=".ChatListActivity"/>
+        <activity android:name=".MyPostsActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".NotificationsActivity"/>
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AdminPostsActivity" />
+        <activity android:name=".AdminUsersActivity" />
+        <activity android:name=".AdminAnalyticsActivity" />
+        <activity android:name=".ItemStatusActivity" />
+        <activity android:name=".ClaimActivity" />
+        <activity android:name=".ReviewClaimsActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".MyClaimsActivity" />
+        <activity android:name=".OnboardingActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".FaqActivity" />
+        <activity android:name=".LocationPickerActivity" />
+        <activity android:name=".ItemsMapActivity" />
+        <activity android:name=".PhotoSearchActivity" />
+    </application>
+</manifest>

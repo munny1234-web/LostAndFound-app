@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <TextView android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="22sp" android:textColor="#1A1A2E"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Search by Photo" android:textSize="18sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Find similar posted items" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:id="@+id/layoutPickPhoto" android:layout_width="match_parent"
+                android:layout_height="180dp" android:background="@drawable/chip_default"
+                android:orientation="vertical" android:gravity="center" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📷" android:textSize="44sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Tap to choose a photo" android:textSize="13sp"
+                    android:textColor="#9B8EC4" android:paddingTop="8dp"/>
+            </LinearLayout>
+
+            <ImageView android:id="@+id/imgQueryPreview" android:layout_width="match_parent"
+                android:layout_height="180dp" android:scaleType="centerCrop"
+                android:visibility="gone" android:layout_marginBottom="10dp"/>
+
+            <Button android:id="@+id/btnRunSearch" android:layout_width="match_parent" android:layout_height="54dp"
+                android:text="🔍 Find Similar Items" android:background="@drawable/btn_purple"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"
+                android:enabled="false" android:layout_marginBottom="16dp"/>
+
+            <TextView android:id="@+id/tvSearchStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="" android:textSize="13sp" android:textColor="#555" android:gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <LinearLayout android:id="@+id/layoutResults" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

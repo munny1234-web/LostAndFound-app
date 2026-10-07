@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_lost" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="←" android:textSize="26sp" android:textColor="#FFFFFF" android:paddingEnd="16dp"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Report Lost Item" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AI will help categorize your item" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp" android:layout_marginBottom="12dp">
+
+                <LinearLayout android:id="@+id/layoutPhoto" android:layout_width="match_parent"
+                    android:layout_height="160dp" android:background="@drawable/chip_default"
+                    android:orientation="vertical" android:gravity="center" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="40sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Add up to 4 photos — AI will detect category!" android:textSize="12sp"
+                        android:textColor="#9B8EC4" android:paddingTop="8dp" android:gravity="center"/>
+                </LinearLayout>
+
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView android:id="@+id/imgPreview" android:layout_width="match_parent"
+                        android:layout_height="160dp" android:scaleType="centerCrop" android:visibility="gone"/>
+                    <Button android:id="@+id/btnRemoveCover" android:layout_width="26dp" android:layout_height="26dp"
+                        android:layout_gravity="top|end" android:layout_marginTop="8dp" android:layout_marginEnd="8dp"
+                        android:text="×" android:textColor="#FFFFFF" android:textSize="14sp"
+                        android:backgroundTint="#FF4444" android:minWidth="0dp" android:minHeight="0dp"
+                        android:padding="0dp" android:visibility="gone" android:insetTop="0dp" android:insetBottom="0dp"/>
+                </FrameLayout>
+
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                    <LinearLayout android:id="@+id/layoutExtraThumbs" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:orientation="horizontal"
+                        android:paddingBottom="4dp" android:visibility="gone"/>
+                </HorizontalScrollView>
+
+                <TextView android:id="@+id/tvAddMore" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="➕ Add another photo" android:textSize="12sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:padding="8dp" android:visibility="gone"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- ML Suggestion Box -->
+                <LinearLayout android:id="@+id/layoutMLSuggestion" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:background="@drawable/chip_selected"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:padding="12dp" android:layout_marginBottom="16dp" android:visibility="gone">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🤖" android:textSize="20sp" android:paddingEnd="8dp"/>
+                    <TextView android:id="@+id/tvMLSuggestion" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Analyzing..."
+                        android:textSize="13sp" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Item Name *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etItemName" android:layout_width="match_parent" android:layout_height="56dp"
+                    android:hint="e.g. Black iPhone 14..." android:paddingHorizontal="18dp"
+                    android:background="@drawable/input_modern" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Category *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:background="@drawable/input_modern"
+                    android:paddingHorizontal="18dp" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Description *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etDescription" android:layout_width="match_parent" android:layout_height="110dp"
+                    android:hint="Describe color, brand, size, unique features..."
+                    android:paddingHorizontal="18dp" android:paddingTop="12dp" android:gravity="top"
+                    android:background="@drawable/input_modern" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lost Date *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+                    android:orientation="horizontal" android:layout_marginBottom="18dp">
+                    <TextView android:id="@+id/tvLostDate" android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1" android:gravity="center_vertical" android:paddingHorizontal="18dp"
+                        android:background="@drawable/input_modern" android:text="Select date"
+                        android:textColor="#9B8EC4" android:layout_marginEnd="10dp"/>
+                    <Button android:id="@+id/btnPickDate" android:layout_width="56dp" android:layout_height="56dp"
+                        android:text="📅" android:background="@drawable/btn_purple" android:textColor="#FFFFFF" android:textSize="20sp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lost Location *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+                    android:orientation="horizontal" android:layout_marginBottom="18dp">
+                    <EditText android:id="@+id/etLocation" android:layout_width="0dp" android:layout_height="56dp"
+                        android:layout_weight="1" android:hint="e.g. Dhaka, Gulshan..." android:paddingHorizontal="18dp"
+                        android:background="@drawable/input_modern" android:layout_marginEnd="8dp"/>
+                    <Button android:id="@+id/btnPickLocation" android:layout_width="56dp" android:layout_height="56dp"
+                        android:text="📍" android:background="@drawable/btn_purple" android:textColor="#FFFFFF" android:textSize="20sp"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Contact Number *" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etContact" android:layout_width="match_parent" android:layout_height="56dp"
+                    android:hint="Your phone number" android:inputType="phone" android:paddingHorizontal="18dp"
+                    android:background="@drawable/input_modern" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Reward (Optional)" android:textSize="13sp" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etReward" android:layout_width="match_parent" android:layout_height="56dp"
+                    android:hint="e.g. ৳500 reward" android:paddingHorizontal="18dp"
+                    android:background="@drawable/input_modern"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/btnSubmit" android:layout_width="match_parent" android:layout_height="60dp"
+        android:text="Submit Lost Report" android:background="@drawable/btn_lost"
+        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" android:layout_margin="16dp"/>
+</LinearLayout>

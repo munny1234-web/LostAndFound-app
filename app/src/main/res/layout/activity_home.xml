@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F3F2FC">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:paddingBottom="18dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Hello 👋" android:textSize="13sp" android:textColor="#FFFFFFAA"/>
+                <TextView android:id="@+id/tvUserName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="User"
+                    android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/circle_glass" android:gravity="center"
+                android:layout_marginEnd="10dp">
+                <TextView android:id="@+id/tvMapView" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="🗺️" android:textSize="20sp"/>
+            </LinearLayout>
+            <FrameLayout android:layout_width="44dp" android:layout_height="44dp" android:layout_marginEnd="10dp">
+                <LinearLayout android:layout_width="44dp" android:layout_height="44dp"
+                    android:background="@drawable/circle_glass" android:gravity="center">
+                    <TextView android:id="@+id/tvChats" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="💬" android:textSize="20sp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvChatsBadge" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:minWidth="18dp" android:minHeight="18dp" android:gravity="center"
+                    android:background="@drawable/badge_red" android:textColor="#FFFFFF" android:textSize="10sp"
+                    android:textStyle="bold" android:layout_gravity="top|end" android:visibility="gone"/>
+            </FrameLayout>
+            <FrameLayout android:layout_width="44dp" android:layout_height="44dp" android:layout_marginEnd="10dp">
+                <LinearLayout android:layout_width="44dp" android:layout_height="44dp"
+                    android:background="@drawable/circle_glass" android:gravity="center">
+                    <TextView android:id="@+id/tvNotifications" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="🔔" android:textSize="20sp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvNotificationsBadge" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:minWidth="18dp" android:minHeight="18dp" android:gravity="center"
+                    android:background="@drawable/badge_red" android:textColor="#FFFFFF" android:textSize="10sp"
+                    android:textStyle="bold" android:layout_gravity="top|end" android:visibility="gone"/>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/layoutProfileIconBtn" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/circle_glass" android:gravity="center">
+                <FrameLayout android:layout_width="36dp" android:layout_height="36dp">
+                    <TextView android:id="@+id/tvProfile" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:text="👤" android:textSize="20sp"
+                        android:gravity="center"/>
+                    <ImageView android:id="@+id/imgProfileIcon" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Search Bar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="54dp"
+            android:background="@drawable/search_bar" android:orientation="horizontal"
+            android:gravity="center_vertical" android:paddingHorizontal="16dp" android:elevation="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔍" android:textSize="18sp" android:paddingEnd="10dp"/>
+            <EditText android:id="@+id/etSearch" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:hint="Search items by name or location..."
+                android:background="@android:color/transparent" android:textSize="14sp"/>
+            <TextView android:id="@+id/btnSearch" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Search"
+                android:textSize="13sp" android:textColor="#6C63FF" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Category Filter -->
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#FFFFFF" android:paddingVertical="12dp" android:scrollbars="none" android:elevation="2dp">
+        <LinearLayout android:id="@+id/categoryContainer" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp"/>
+    </HorizontalScrollView>
+
+    <!-- Type Tabs -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#FFFFFF" android:orientation="horizontal"
+        android:paddingHorizontal="16dp" android:paddingBottom="14dp" android:paddingTop="8dp">
+        <Button android:id="@+id/btnAll" android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="All Posts" android:background="@drawable/btn_purple"
+            android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" android:layout_marginEnd="6dp"/>
+        <Button android:id="@+id/btnLost" android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="🔴 Lost" android:backgroundTint="#FFF0F0"
+            android:textColor="#FF4444" android:textSize="12sp" android:textStyle="bold" android:layout_marginEnd="6dp"/>
+        <Button android:id="@+id/btnFound" android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="🟢 Found" android:backgroundTint="#F0FFF4"
+            android:textColor="#2ECC71" android:textSize="12sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ListView android:id="@+id/listItems" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:padding="14dp"
+        android:divider="@android:color/transparent" android:dividerHeight="14dp"/>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="68dp"
+        android:background="#FFFFFF" android:orientation="horizontal" android:elevation="12dp">
+        <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <LinearLayout android:layout_width="44dp" android:layout_height="32dp"
+                android:background="@drawable/chip_selected" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="10sp" android:textColor="#6C63FF" android:textStyle="bold" android:paddingTop="2dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navReportLost" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📋" android:textSize="22sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Report Lost" android:textSize="10sp" android:textColor="#888" android:paddingTop="2dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navReportFound" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍" android:textSize="22sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Report Found" android:textSize="10sp" android:textColor="#888" android:paddingTop="2dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navMyPosts" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📌" android:textSize="22sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="My Posts" android:textSize="10sp" android:textColor="#888" android:paddingTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

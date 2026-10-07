@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="44dp" android:layout_height="44dp"
+            android:background="@drawable/card_elevated" android:gravity="center"
+            android:layout_marginEnd="14dp">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="←" android:textSize="20sp"
+                android:textColor="#1A1A2E" android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⚙️ Admin Panel" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Lost &amp; Found Management" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Stats Cards -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📊 Overview" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="100dp"
+                    android:layout_weight="1" android:background="@drawable/gradient_lost"
+                    android:orientation="vertical" android:gravity="center"
+                    android:layout_marginEnd="8dp">
+                    <TextView android:id="@+id/tvTotalLost" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textSize="32sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Lost Posts" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="100dp"
+                    android:layout_weight="1" android:background="@drawable/gradient_found"
+                    android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvTotalFound" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textSize="32sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Found Posts" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="100dp"
+                    android:layout_weight="1" android:background="@drawable/btn_purple"
+                    android:orientation="vertical" android:gravity="center"
+                    android:layout_marginEnd="8dp">
+                    <TextView android:id="@+id/tvTotalUsers" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textSize="32sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Total Users" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="100dp"
+                    android:layout_weight="1" android:background="@drawable/chip_selected"
+                    android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvTotalChats" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0"
+                        android:textSize="32sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Active Chats" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Management Shortcuts -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+                <Button android:id="@+id/btnManagePosts" android:layout_width="0dp" android:layout_height="52dp"
+                    android:layout_weight="1" android:text="📋 Manage Posts" android:background="@drawable/btn_purple"
+                    android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                <Button android:id="@+id/btnManageUsers" android:layout_width="0dp" android:layout_height="52dp"
+                    android:layout_weight="1" android:text="👥 Manage Users" android:background="@drawable/btn_secondary"
+                    android:textColor="#6C63FF" android:textSize="13sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btnAnalytics" android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="📊 Analytics Dashboard" android:background="@drawable/btn_found"
+                android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="20dp"/>
+
+            <!-- Reports Section -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⚠️ User Reports" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="#1A1A2E" android:paddingBottom="12dp"/>
+
+            <ListView android:id="@+id/listReports" android:layout_width="match_parent"
+                android:layout_height="400dp" android:divider="@android:color/transparent"
+                android:dividerHeight="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

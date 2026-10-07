@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F4FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header" android:padding="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_elevated" android:gravity="center" android:layout_marginEnd="14dp">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="←" android:textSize="20sp" android:textColor="#1A1A2E"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Claim Item" android:textSize="22sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Prove this item belongs to you" android:textSize="12sp" android:textColor="#FFFFFFCC"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/chip_selected" android:orientation="horizontal"
+                android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📦" android:textSize="24sp" android:paddingEnd="12dp"/>
+                <TextView android:id="@+id/tvItemTitle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvClaimStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/chip_default"
+                android:padding="12dp" android:textSize="14sp" android:textColor="#6C63FF"
+                android:textStyle="bold" android:gravity="center" android:visibility="gone"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout android:id="@+id/layoutVerificationQuestion" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/chip_selected"
+                android:orientation="vertical" android:padding="16dp" android:layout_marginBottom="12dp"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔒 Verification Question" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF" android:paddingBottom="6dp"/>
+                <TextView android:id="@+id/tvVerificationQuestion" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#FFFFFF"
+                    android:paddingBottom="12dp"/>
+                <EditText android:id="@+id/etVerificationAnswer" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:hint="Your answer..." android:paddingHorizontal="16dp"
+                    android:background="@drawable/input_modern"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_elevated" android:orientation="vertical"
+                android:padding="22dp" android:elevation="3dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Why do you think this is yours? *" android:textSize="13sp"
+                    android:textColor="#6C63FF" android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etClaimReason" android:layout_width="match_parent"
+                    android:layout_height="110dp" android:hint="Explain why this item belongs to you..."
+                    android:paddingHorizontal="18dp" android:paddingTop="12dp" android:gravity="top"
+                    android:background="@drawable/input_modern" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Additional proof details (Optional)" android:textSize="13sp"
+                    android:textColor="#6C63FF" android:textStyle="bold" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/etOwnershipProof" android:layout_width="match_parent"
+                    android:layout_height="80dp" android:hint="Serial number, receipt, unique marking..."
+                    android:paddingHorizontal="18dp" android:paddingTop="12dp" android:gravity="top"
+                    android:background="@drawable/input_modern" android:layout_marginBottom="18dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Upload Proof Photo (Optional)" android:textSize="13sp"
+                    android:textColor="#6C63FF" android:textStyle="bold" android:paddingBottom="8dp"/>
+
+                <Button android:id="@+id/btnUploadProof" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="📷 Upload Receipt / Photo"
+                    android:backgroundTint="#F0EEFF" android:textColor="#6C63FF"
+                    android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:id="@+id/layoutProofPreview" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:scrollbars="none">
+                        <LinearLayout android:id="@+id/layoutProofThumbs" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:orientation="horizontal"
+                            android:paddingBottom="4dp"/>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button android:id="@+id/btnSubmitClaim" android:layout_width="match_parent" android:layout_height="60dp"
+        android:text="Submit Claim Request" android:background="@drawable/btn_purple"
+        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

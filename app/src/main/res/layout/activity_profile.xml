@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F7F7FB" android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <!-- ============ Hero card (floating, all corners rounded — like the web version) ============ -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/gradient_hero_card" android:orientation="vertical"
+            android:gravity="center" android:padding="26dp" android:elevation="6dp"
+            android:layout_marginBottom="14dp">
+
+            <FrameLayout android:layout_width="94dp" android:layout_height="94dp"
+                android:background="@drawable/ring_glass" android:layout_marginBottom="12dp">
+                <ImageView android:id="@+id/imgProfile" android:layout_width="88dp" android:layout_height="88dp"
+                    android:layout_gravity="center" android:scaleType="centerCrop"
+                    android:background="@drawable/circle_purple"/>
+            </FrameLayout>
+
+            <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="User Name" android:textSize="20sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:id="@+id/tvEmail" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="#FFFFFFCC" android:paddingTop="3dp"/>
+
+            <TextView android:id="@+id/tvMemberSince" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textColor="#FFFFFF" android:textStyle="bold"
+                android:background="@drawable/badge_glass" android:paddingHorizontal="14dp" android:paddingVertical="5dp"
+                android:layout_marginTop="10dp" android:visibility="gone"/>
+
+            <Button android:id="@+id/btnEditProfile" android:layout_width="wrap_content" android:layout_height="40dp"
+                android:text="✏️  Edit Profile" android:textAllCaps="false" android:textSize="12sp" android:textStyle="bold"
+                android:textColor="#FFFFFF" android:background="@drawable/pill_glass" android:backgroundTint="@null"
+                android:paddingHorizontal="20dp" android:minWidth="0dp" android:layout_marginTop="14dp"/>
+        </LinearLayout>
+
+        <!-- ============ KPI row: 3 separate white cards, like the web version ============ -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="6dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/kpi_card" android:orientation="vertical"
+                android:padding="14dp" android:layout_marginEnd="8dp" android:elevation="1dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📦" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvLostCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="21sp" android:textStyle="bold" android:textColor="#14142B"
+                    android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="POSTS LOST" android:textSize="9sp" android:textColor="#9A98AE" android:textStyle="bold"
+                    android:letterSpacing="0.06"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/kpi_card" android:orientation="vertical"
+                android:padding="14dp" android:layout_marginEnd="8dp" android:elevation="1dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🎉" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvFoundCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="21sp" android:textStyle="bold" android:textColor="#14142B"
+                    android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="POSTS FOUND" android:textSize="9sp" android:textColor="#9A98AE" android:textStyle="bold"
+                    android:letterSpacing="0.06"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@drawable/kpi_card" android:orientation="vertical"
+                android:padding="14dp" android:elevation="1dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🙋" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvClaimCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="21sp" android:textStyle="bold" android:textColor="#14142B"
+                    android:layout_marginTop="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CLAIMS" android:textSize="9sp" android:textColor="#9A98AE" android:textStyle="bold"
+                    android:letterSpacing="0.06"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============ Activity ============ -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACTIVITY" android:textSize="11sp" android:textColor="#9A98AE" android:textStyle="bold"
+            android:letterSpacing="0.08" android:paddingTop="18dp" android:paddingBottom="8dp" android:paddingStart="2dp"/>
+
+        <LinearLayout android:id="@+id/btnMyPosts" android:layout_width="match_parent" android:layout_height="60dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/tile_white" android:clickable="true" android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="9dp" android:elevation="1dp">
+            <LinearLayout android:layout_width="38dp" android:layout_height="38dp"
+                android:background="@drawable/chip_soft_indigo" android:gravity="center" android:layout_marginEnd="13dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📦" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="My Posts" android:textSize="14sp" android:textColor="#14142B" android:textStyle="normal"/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/btnMyClaims" android:layout_width="match_parent" android:layout_height="60dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/tile_white" android:clickable="true" android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="9dp" android:elevation="1dp">
+            <LinearLayout android:layout_width="38dp" android:layout_height="38dp"
+                android:background="@drawable/chip_soft_green" android:gravity="center" android:layout_marginEnd="13dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🙋" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="My Claims" android:textSize="14sp" android:textColor="#14142B" android:textStyle="normal"/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right"/>
+        </LinearLayout>
+
+        <!-- ============ Support ============ -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SUPPORT" android:textSize="11sp" android:textColor="#9A98AE" android:textStyle="bold"
+            android:letterSpacing="0.08" android:paddingTop="10dp" android:paddingBottom="8dp" android:paddingStart="2dp"/>
+
+        <LinearLayout android:id="@+id/btnAbout" android:layout_width="match_parent" android:layout_height="60dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/tile_white" android:clickable="true" android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="9dp" android:elevation="1dp">
+            <LinearLayout android:layout_width="38dp" android:layout_height="38dp"
+                android:background="@drawable/chip_soft_gray" android:gravity="center" android:layout_marginEnd="13dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ℹ️" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="About App" android:textSize="14sp" android:textColor="#14142B" android:textStyle="normal"/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right"/>
+        </LinearLayout>
+
+        <!-- ============ Administration (admin account only) ============ -->
+        <TextView android:id="@+id/tvAdminSectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ADMINISTRATION" android:textSize="11sp" android:textColor="#9A98AE" android:textStyle="bold"
+            android:letterSpacing="0.08" android:paddingTop="10dp" android:paddingBottom="8dp" android:paddingStart="2dp"
+            android:visibility="gone"/>
+
+        <LinearLayout android:id="@+id/btnAdminDashboard" android:layout_width="match_parent" android:layout_height="60dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/tile_admin_soft" android:clickable="true" android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="9dp" android:elevation="1dp" android:visibility="gone">
+            <LinearLayout android:layout_width="38dp" android:layout_height="38dp"
+                android:background="@drawable/chip_soft_indigo" android:gravity="center" android:layout_marginEnd="13dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛠️" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Admin Dashboard" android:textSize="14sp" android:textColor="#14142B" android:textStyle="normal"/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right"/>
+        </LinearLayout>
+
+        <!-- ============ Account ============ -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACCOUNT" android:textSize="11sp" android:textColor="#9A98AE" android:textStyle="bold"
+            android:letterSpacing="0.08" android:paddingTop="10dp" android:paddingBottom="8dp" android:paddingStart="2dp"/>
+
+        <LinearLayout android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="60dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/tile_white" android:clickable="true" android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="20dp" android:elevation="1dp">
+            <LinearLayout android:layout_width="38dp" android:layout_height="38dp"
+                android:background="@drawable/chip_soft_red" android:gravity="center" android:layout_marginEnd="13dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚪" android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Sign Out" android:textSize="14sp" android:textColor="#F04444" android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
